@@ -9,7 +9,8 @@ window.onload = function () {
     appendSeconds = document.getElementById('seconds')
     appendTens = document.getElementById('tens')
     resetBtn = document.getElementById('reset')
-    
+    time = document.getElementsByName('time')
+    teste = document.getElementById('teste')
     let Interval
 
     const startTimer = () => {
@@ -44,6 +45,8 @@ window.onload = function () {
             cps.appendChild(item)
         }
     }
+
+    teste.innerHTML += time.value
     
     b.onclick = () => {
         clearInterval(Interval)
