@@ -9,8 +9,6 @@ window.onload = function () {
     appendSeconds = document.getElementById('seconds')
     appendTens = document.getElementById('tens')
     resetBtn = document.getElementById('reset')
-    time = document.getElementsByName('time')
-    teste = document.getElementById('teste')
     let Interval
 
     const startTimer = () => {
@@ -36,8 +34,9 @@ window.onload = function () {
             tens = 0
             appendTens.innerHTML = "0" + 0
         }
+
         //limite de tempo
-        if(seconds == 1){
+        if(seconds == timeSelected){
             clearInterval(Interval)
             b.setAttribute('disabled', true)
             item = document.createElement('option')
@@ -46,15 +45,29 @@ window.onload = function () {
         }
     }
 
-    teste.innerHTML += time.value
-    
+    //Botão principal
     b.onclick = () => {
         clearInterval(Interval)
         Interval = setInterval(startTimer, 10)
         c++
         n.innerHTML = `${c}`
+
+        timeSelected = 0
+
+        let time1 = document.getElementById('itime1')
+        let time3 = document.getElementById('itime3')
+        let time5 = document.getElementById('itime5')
+    
+        if(time5.checked==true){
+            timeSelected = time5.value
+        }else if(time3.checked==true){
+            timeSelected = time3.value
+        }else{
+            timeSelected = time1.value
+        }
     }
 
+    //Botão Reset
     resetBtn.onclick = () => {
         clearInterval(Interval)
         tens = "00"
