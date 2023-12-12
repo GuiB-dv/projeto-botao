@@ -9,6 +9,7 @@ window.onload = function () {
     appendSeconds = document.getElementById('seconds')
     appendTens = document.getElementById('tens')
     resetBtn = document.getElementById('reset')
+    
     let Interval
 
     const startTimer = () => {
@@ -35,7 +36,7 @@ window.onload = function () {
             appendTens.innerHTML = "0" + 0
         }
         //limite de tempo
-        if(seconds == 3){
+        if(seconds == 1){
             clearInterval(Interval)
             b.setAttribute('disabled', true)
             item = document.createElement('option')

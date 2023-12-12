@@ -15,7 +15,6 @@ section{
     padding: 15px;
     width: 250px;
     margin: auto;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.158);
 }
 
 footer{
@@ -24,13 +23,14 @@ footer{
     font-style: italic;
 }
 
+/*Botão principal*/
 .dot{
     outline: none;
     font: normal 16pt Arial;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     line-height: 145px;
-    height: 150px;
-    width: 150px;
+    height: 140px;
+    width: 140px;
     background-color: green;
     border-radius: 50%;
     display: inline-block;
@@ -40,6 +40,7 @@ footer{
     border: none;
     margin-top: 20px;
 }
+/*Interatividade botão*/
 .dot:hover {background-color: #f12727}
 .dot:active {
     background-color: green;
@@ -47,6 +48,7 @@ footer{
     transform: translateY(4px);
 }
 
+/*Botão reset*/
 .reset{
     outline: none;
     font: normal 12pt Arial;
@@ -62,28 +64,55 @@ footer{
     border-radius: 5px;
     margin-bottom: 30px;
 }
+/*Interatividade botão reset*/
 .reset:hover {background-color: #f12727}
 .reset:active {
     background-color: rgb(128, 0, 0);
     box-shadow: 0 5px rgba(0, 0, 0, 0.377);
     transform: translateY(4px);
 }
+
+fieldset{
+    display: inline;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+div#timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 5px;
+    background: rgba(255, 46, 46, 0.13);
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(243, 39, 39);
+}
 #seconds, #tens{
-    font-size: 40px;
+    font-size: 65px;
 }
 
 #quantidade {
-    text-align: center;
-    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    background: rgba(76, 255, 85, 0.322);
+    padding: 10px;
     border-radius: 10px;
     border-style: solid;
-    padding: 7px;
-    margin-top: 30px;
-    margin-left: 41%;
-    width: 25px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.158)
-
+    border-width: 2px;
+    border-color: grey;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width: 40px;
 }
+
 #cps{
     width: 200px;
 }

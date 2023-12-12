@@ -13,17 +13,18 @@
     <section>
         <button class="dot" id="dot">CLICK ME</button>
         <div>
-            <p id="quantidade">0</p>
+            <span id="quantidade">0</span>
         </div>
-        <div>time:
-        <input id="one" type="checkbox">1s
-        <input id="three" type="checkbox">3s
-        <input id="five" type="checkbox">5s
-        
+        <fieldset>
+            <legend>Seconds</legend>
+            <input type="radio" name="time" id="itime1" checked><label for="itime">1</label>
+            <input type="radio" name="time" id="itime3"><label for="itime">3</label>
+            <input type="radio" name="time" id="itime5"><label for="itime">5</label>  
+        </fieldset>
+        <div id="timer">
+            <span id="seconds">00</span>:<span id="tens">00</span>
         </div>
         <div>
-            <span id="seconds">00</span>:<span id="tens">00</span>
-            </p>
             <button id="reset" class="reset">reset</button>
         </div>
         <select id="cps" size="10">
